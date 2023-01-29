@@ -7,12 +7,15 @@ body{
     background-color: white;
     margin: 0px;
     padding: 0px;
+    /* -webkit-clip-path: polygon(0 0, 100% 0, 100% 0%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 66%, 0 100%);  */
 }
 
 #hero{
-    width: 110vw;
+    width: 100vw;
     height: auto;
-    background-image: linear-gradient(-70deg, #FFFFFF 0%, #E2F1FF 100%);
+    display: flex;
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #E2F1FF 100%);
 }
 
 .logo{
@@ -21,7 +24,7 @@ body{
     height: 48px;
     color: #722ED1;
     margin-top: 5px;
-    left: 16.67%;
+    left: 20%;
     right: 80%;
     top: 0.57%;
     bottom: 98.28%;
@@ -69,9 +72,10 @@ a{
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 8px 16px;
+    padding: 8px 2px;
     margin-top: 100px;
-    left: 16.67%;
+    height: 70vh;
+    /* left: 10%; */
 }
 
 #content{
@@ -106,13 +110,14 @@ a{
 }
 
 .image{
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/f4/Build-website.jpg");
-    /* position: absolute; */
-    display: inline-block;
-    background-size:contain;
-    width: 472px;
-    height: 300px;
-    display: inline-block;
+    /* background-image: url("C:\Users\wwwso\Downloads\image 1.png"); */
+    /* background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/f4/Build-website.jpg"); */
+    margin-top: 100px;
+    margin-right: 50px;
+    /* display: inline-block; */
+    /* background-size:contain; */
+    /* width: 472px;
+    height: 300px; */
 }
 
 #button-two{
@@ -135,21 +140,27 @@ a{
 
 .topic{
     color: #722ED1;
+    font-size: 16px;
+    font-weight: 500;
+    margin: auto;
+    /* margin-left: -2px; */
 }
 
 #qulby{
-    margin: 10vh 10vw;
+    padding: 10vh 4vw;
     justify-content: center;
     align-items: center;
 }
 
 .heading{
     background-color: #F7F1FF;
-    width: auto;
+    width: 224px;
     height: 40px;
     border-radius: 20px;
     border: 1px solid #F7F1FF;
     color: #722ED1;
+    padding: 0px 2px;
+    margin-top: 100px;
 }
 
 .title{
@@ -160,6 +171,7 @@ a{
     flex: none;
     order: 1;
     flex-grow: 0;
+    /* margin: 10px 0px; */
 }
 
 #qulby>p{
@@ -168,6 +180,7 @@ a{
     line-height: 24px;
     margin-left: 250px;
     margin-right: 250px;
+    
 }
 
 #container{
@@ -199,26 +212,34 @@ a{
     flex: none;
     order: 2;
     flex-grow: 0;
-    width:20vw;
+    width:25vw;
 
 }
 
-#products, #engineering{
+#products{
     display: flex;
-    margin-left: 300px;
-    margin-bottom: 100px;
+     flex-direction: row-reverse;
+      margin-right: 20vw;
+}
+
+#engineering{
+    display: flex;
+    flex-direction: row;
+    margin-left: 16vw;
+    /* margin-bottom: 100px; */
 }
 
 .inner{
     text-align: left;
     padding-right: 50px;
     padding-left: 50px;
+    padding-top: 70px;
 }
 
 #testinomial{
     background-image: linear-gradient(175.54deg, #F9F0FF 25.81%, #E2F1FF 96.38%);
     opacity: 0.47;
-    height: 75vh;
+    height: 60vh;
 }
 
 #quote{
@@ -226,13 +247,15 @@ a{
     font-size: 24px;
     line-height: 32px;
     color: #160637;
-    margin:10vh 25vw 5vh 25vw;
+    padding:10vh 29vw 0vh 17vw;
 }
 
 #profile{
     height: 80px;
     width: 80px;
-    margin-left: 48%;
+    /* margin-left: 46%; */
+    top:-30px;
+    
 }
 
 .name{
@@ -243,13 +266,14 @@ a{
     flex: none;
     order: 2;
     flex-grow: 0;
-    
+    margin-left: -2%;
+    margin: 0px;
 }
 
 #client-logos{
     display: flex;
     height:40px;
-    margin-left: 20vw;
+    margin-left: 12vw;
     margin-right: 20vw;
 }
 
@@ -288,7 +312,8 @@ a{
     left: 720px;
     top: 3181px;
     
-    background-color: #F9F0FF;
+    background-color: #FFFFFF;
+    box-shadow: 4px 4px 12px rgba(137, 137, 162, 0.122);
 }
 
 #trust{
@@ -296,7 +321,7 @@ a{
     width: 35%;
     margin-left: 5vw;
     /* margin-top: 5vh; */
-    background-color: #F9F0FF;
+    background-color: #FFFFFF;
 }
 
 #trust-title{
@@ -401,10 +426,158 @@ i{
     color: #722ED1;
 }
 
+hr{
+    opacity: 0.48;
+    border: 1px solid #8989A2;
+}
+
+select, #button-mobile{
+    display: none;
+}
+
 @media screen and (max-width:600px){
-    #hero, #qulby, #product, #engineering, #signup{
+    body{
+        width:100vw;
+        margin: 10px 2vw 100px 2vw;
+    }
+
+    .logo{
+        margin-bottom: 10px;
+        
+    }
+
+    #tag{
+        margin-top: 50px;
+    }
+
+    #main, #hero, #signup{
         display: flex;
         flex-direction:column;
-        margin: 5vw;
+        margin: 0px;
+        padding: 0px;
+        height: auto;
+        text-align: start;
+        /* justify-content: left; */
+        align-items:flex-start;
+        padding-left: 4vw;
     }
+
+    #qulby, #products, #engineering, #testinomial{
+        /* display: flex; */
+        flex-direction: column;
+        padding:0px;
+        margin: 0px;
+        width: 90vw;
+        height: auto;
+    }
+
+    .inner{
+        padding-top: 0px;
+        margin-top: -5vh;
+    }
+
+    select, #button-mobile{
+        display: inline-block;
+        margin-right: 5vw;
+        margin-left: 3vw;
+        
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        height: 75vh;
+        /* width: 60vw; */
+    }
+
+    .feature, .text{
+        width: 100%;
+    }
+
+    #button-mobile{
+        width: 142px;
+        height: 38px;
+        background-color: #FFFFFF;
+        border: 1px solid #722ED1;
+        color:#722ED1;
+        border-radius: 23px;
+    }
+
+    #content{
+        width: 75vw;
+        margin-top: 20px;
+    }
+
+   .mobile-view{
+    width: 65vw;
+    height: 30vh;
+    margin-top: 0px;
+    /* margin-left: 5px; */
+   }
+
+   .images{
+    margin-left:15vw;
+   }
+
+    #nav-elements{
+        display: none;
+    }
+
+    h1{
+        padding: 0px;
+    }
+
+    #qulby > p{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .box{
+        width: 100%;
+        text-align: center;
+        padding:0%;
+    }
+
+    #quote{
+        padding: 0px;
+        margin-left: 5vw;
+        width: 75vw;
+        /* margin-top: -20vh; */
+    }
+
+    #client-logos{
+        display: inline-block;
+    }
+
+    #profile, .name{
+        margin-left: -5vw;
+    }
+
+    #trust-title,#trusties{
+        width:75vw;
+        padding: 0px;
+    }
+
+    #form, #button-four, input,#footer-text, .horizontal-list{
+        margin: 0px;
+        width:75vw;
+        text-align: center;
+        margin-top:5px;
+    }
+
+    #input-footer{
+        text-align: left;
+        margin-left: 5px;
+    }
+
+    footer{
+        width: 75vw;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-left:5vw;
+        /* margin-bottom: -300px; */
+    }
+    
 }
